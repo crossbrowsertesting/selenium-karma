@@ -2,7 +2,7 @@
 'use strict';
 
 module.exports = function (config) {
-    let customBrowsers = ['Remote-IE10', 'Remote-Chrome56', 'Remote-Firefox46'];
+    let customBrowsers = ['Remote-IE', 'Remote-Chrome', 'Remote-Firefox'];
     let userConfig = require('./userConfig.js'),
         os          = require('os'),
         hostname    = os.hostname();
@@ -12,7 +12,7 @@ module.exports = function (config) {
         basePath: '',
         hostname : hostname,
         customLaunchers: {
-            'Remote-IE10': {
+            'Remote-IE': {
                 base: 'WebdriverIO',
                 config: {
                     host: 'hub.crossbrowsertesting.com',
@@ -22,15 +22,14 @@ module.exports = function (config) {
                     desiredCapabilities: {
                         name: 'Karma Unit Testing',
                         build: '1.0',
-                        browserName: 'internet explorer',
-                        browser_api_name: 'IE10',
-                        os_api_name: 'Win7x64-C2',
+                        browserName: 'Internet Explorer',       // Pulls latest version by default
+                        platform: 'Windows 7',                  // To specify version, add version: 'desired version'
                         record_video: 'true',
                         record_network: 'true'
                     }
                 }
             },
-            'Remote-Chrome56': {
+            'Remote-Chrome': {
                 base: 'WebdriverIO',
                 config: {
                     host: 'hub.crossbrowsertesting.com',
@@ -40,15 +39,14 @@ module.exports = function (config) {
                     desiredCapabilities: {
                         name: 'Karma Unit Testing',
                         build: '1.0',
-                        browserName: 'chrome',
-                        browser_api_name: 'Chrome56x64',
-                        os_api_name: 'Win7x64-C1',
+                        browserName: 'Chrome',
+                        platform: 'Windows 7',
                         record_video: 'true',
                         record_network: 'true'
                     }
                 }
             },
-            'Remote-Firefox46': {
+            'Remote-Firefox': {
                 base: 'WebdriverIO',
                 config: {
                     host: 'hub.crossbrowsertesting.com',
@@ -58,9 +56,8 @@ module.exports = function (config) {
                     desiredCapabilities: {
                         name: 'Karma Unit Testing',
                         build: '1.0',
-                        browserName: 'firefox',
-                        browser_api_name: 'FF46x64',
-                        os_api_name: 'Win7x64-C1',
+                        browserName: 'Firefox',
+                        platform: 'Windows 7',
                         record_video: 'true',
                         record_network: 'true'
                     }
