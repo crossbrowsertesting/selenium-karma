@@ -25,7 +25,7 @@ module.exports = function (config) {
                         browserName: 'Internet Explorer',       // Pulls latest version by default
                         platform: 'Windows 7',                  // To specify version, add version: 'desired version'
                         record_video: 'true',
-                        record_network: 'true'
+                        record_network: 'false'
                     }
                 }
             },
@@ -42,7 +42,7 @@ module.exports = function (config) {
                         browserName: 'Chrome',
                         platform: 'Windows 7',
                         record_video: 'true',
-                        record_network: 'true'
+                        record_network: 'false'
                     }
                 }
             },
@@ -59,7 +59,7 @@ module.exports = function (config) {
                         browserName: 'Firefox',
                         platform: 'Windows 7',
                         record_video: 'true',
-                        record_network: 'true'
+                        record_network: 'false'
                     }
                 }
             }
